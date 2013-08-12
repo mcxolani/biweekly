@@ -57,24 +57,24 @@
 			  <fieldset>
 				<legend>Registration form</legend>
 				<div class="form-group">
-				  <label for="exampleInputEmail">Username</label>
+				  <label >Username</label>
 				  <input type="text" class="form-control" value="<?php if(isset($username)){echo $username;}?>" name="username" placeholder="Enter Username">
 				</div>
 				<div class="form-group">
-				  <label for="exampleInputEmail">Full name</label>
+				  <label >Full name</label>
 				  <input type="text" class="form-control" value="<?php if(isset($name)){echo $name;}?>" name="name" placeholder="Enter Full name">
 				</div>
 				<div class="form-group">
-				  <label for="exampleInputEmail">Email address</label>
+				  <label >Email address</label>
 				  <input type="email" class="form-control" value="<?php if(isset($email)){echo $email;}?>" name="email" placeholder="Enter email">
 				</div>
 				<div class="form-group">
-				  <label for="exampleInputPassword">Password</label>
-				  <input type="text" class="form-control" name="password" placeholder="Password">
+				  <label >Password</label>
+				  <input type="password" class="form-control" name="password" placeholder="Password">
 				</div>
 				<div class="form-group">
 				  <label >Re-Type Password</label>
-				  <input type="text" class="form-control" name="password1" placeholder="Re-Enter Password">
+				  <input type="password" class="form-control" name="password1" placeholder="Re-Enter Password">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button><br/><br/>
 				<p><strong><?php if(isset($error)){echo $error;}?></strong></p>
