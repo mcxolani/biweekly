@@ -13,7 +13,10 @@
 			if(!preg_match("%[a-zA-Z0-9_\.-]{5,10}%", $username)){
 					$error .= "* Username must be 5 to 10 charecters long<br/>";
 			}
-			if(!preg_match("%([a-zA-Z0-9.]+){8,}%", $password)){
+			if(!preg_match("%^[a-z0-9A-Z_\.-]+@[a-z0-9A-Z_-]+\.[a-z0-9A-Z_\.-]%", $email)){
+					$error .= "* Invalid email<br/>";
+			}
+			if(!preg_match("%[a-zA-Z0-9\W]{8,}%", $password)){
 					$error .= "* Password must be 8 charecters or more<br/>";
 					
 			}else{
@@ -67,11 +70,11 @@
 				</div>
 				<div class="form-group">
 				  <label for="exampleInputPassword">Password</label>
-				  <input type="password" class="form-control" name="password" placeholder="Password">
+				  <input type="text" class="form-control" name="password" placeholder="Password">
 				</div>
 				<div class="form-group">
 				  <label >Re-Type Password</label>
-				  <input type="password" class="form-control" name="password1" placeholder="Re-Enter Password">
+				  <input type="text" class="form-control" name="password1" placeholder="Re-Enter Password">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button><br/><br/>
 				<p><strong><?php if(isset($error)){echo $error;}?></strong></p>
