@@ -7,22 +7,25 @@
 		$password1 = $_POST['password1'];
 		if(!empty($username)&&!empty($name)&&!empty($email)&&!empty($password)&&!empty($password1)){
 			$error = "";
-			if(!preg_match("%[a-zA-Z\s\-]{3,}%", $name)){
+			if(!$var1 = preg_match("%[a-zA-Z\s\-]{3,}%", $name)){
 					$error .= "* Name invalid<br/>";
 			}
-			if(!preg_match("%[a-zA-Z0-9_\.-]{5,10}%", $username)){
+			if(!$var2 = preg_match("%[a-zA-Z0-9_\.-]{5,10}%", $username)){
 					$error .= "* Username must be 5 to 10 charecters long<br/>";
 			}
-			if(!preg_match("%^[a-z0-9A-Z_\.-]+@[a-z0-9A-Z_-]+\.[a-z0-9A-Z_\.-]%", $email)){
+			if(!$var3 = preg_match("%^[a-z0-9A-Z_\.-]+@[a-z0-9A-Z_-]+\.[a-z0-9A-Z_\.-]%", $email)){
 					$error .= "* Invalid email<br/>";
 			}
-			if(!preg_match("%[a-zA-Z0-9\W]{8,}%", $password)){
+			if(!$var4 = preg_match("%[a-zA-Z0-9\W]{8,}%", $password)){
 					$error .= "* Password must be 8 charecters or more<br/>";
 					
 			}else{
 				if($password != $password1){
 					$error .= "* Password must match<br/>";
 				}
+			}
+			if($var1&&$var1&&$var1&&$var1&&$var1&&$password == $password1){
+				//registration goes here if all validations pass
 			}
 		}else{
 			$error = "Enter all fields";
@@ -47,7 +50,7 @@
 	</style>
   </head>
   <body>
-	<div class="container">
+	<div class="container" >
 		<div class="row" >
 		  <div class="col-lg-4"></div>
 		  <div class="col-lg-4" id="myrow">
