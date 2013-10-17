@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <?php
 ob_start(); 
+=======
+<?php 
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 session_start();
 
 	function loggedin(){

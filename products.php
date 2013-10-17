@@ -1,5 +1,6 @@
 <?php
 include 'includes/header.php';
+<<<<<<< HEAD
 	//require 'db_con.php';
 	if(loggedin()&&getuserfield('admin')){
 		header("Location: manage.php");
@@ -12,10 +13,25 @@ include 'includes/header.php';
 		<h4>Musical Instruments</h4><hr>
 
 </div>
+=======
+	require 'db_con.php';
+	?>
+	 <body>
+	
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" id="orange">
+      <div class="container">
+        <h1>Products here</h1>
+        <p>These are the products we have</p>
+      </div>
+    </div>
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
+<<<<<<< HEAD
    <section class="col-lg-2 ">
    <table class="table table-striped">
    <th>Categories</th>
@@ -183,6 +199,25 @@ include 'includes/header.php';
 			?>
 
 </div>
+=======
+      
+    <?php
+	$query = "SELECT * FROM product";
+			$run_query = mysql_query($query);
+			
+				while($row = mysql_fetch_assoc($run_query)){
+					echo '  <div class="col-lg-4">';
+					echo "<img width='50%' src='".$row['image']."'/><br>";
+					echo "<a href='product.php?prodid=".$row['id']."'>".$row['name']."</a><br>";
+					echo ' </div>';
+				}
+
+     ?>
+</body>			
+			//iveri.co.za
+			//iverilite.co.za
+			//NSA bullrun
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 			<?php
 include 'includes/footer.php';
 ?>

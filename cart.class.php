@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 	// class Cart{
 		// public function add_to_cart($item){
 		// $_SESSION['cart'][clear_string((int)$_GET['prodid'])]+='1';
@@ -24,4 +25,14 @@ session_start();
 		
 		
 	//}
+=======
+	class Cart{
+		public function add_to_cart($item){
+			$_SESSION['item'][] = $item;
+		}
+		public function getItem(){
+			return $_SESSION['item'];
+		}
+	}
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 ?>

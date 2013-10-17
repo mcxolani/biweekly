@@ -18,7 +18,11 @@ require "dbconn.class.php";
 		function save($username,$email,$password){
 			$database = new DatabaseConnection;
 			$con = $database->establsh_con();
+<<<<<<< HEAD
 			$query = "INSERT into users (username, email, password, access) values('".mysql_escape_string($username)."','".mysql_escape_string($email)."','".mysql_escape_string($password)."','1')";
+=======
+			$query = "INSERT into users (username, email, password) values('".mysql_escape_string($username)."','".mysql_escape_string($email)."','".mysql_escape_string($password)."')";
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 			echo $database->execute($query);
 		}
 		

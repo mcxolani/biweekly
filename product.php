@@ -1,5 +1,6 @@
 <?php
 			
+<<<<<<< HEAD
 	//require 'db_con.php';
 	include 'includes/header.php';
 	// if(isset($_GET['add_to_cart'])){
@@ -7,20 +8,39 @@
 		// $cart = new Cart;
 		// $cart->add_to_cart($item);
 	// }
+=======
+	require 'db_con.php';
+	include 'cart.class.php';
+	include 'includes/header.php';
+	if(isset($_GET['add_to_cart'])){
+		$item = $_GET['add_to_cart'];
+		$cart = new Cart;
+		$cart->add_to_cart($item);
+	}
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 	?>
 <body>
 	
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+<<<<<<< HEAD
 <div class="container">
 
 		<h4>Shopping Cart</h4><hr>
 
 </div>
+=======
+    <div class="jumbotron" id="orange">
+      <div class="container">
+       
+      </div>
+    </div>
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
+<<<<<<< HEAD
    <section class="col-lg-3 ">
    <table class="table ">
    <th>Categories</th>
@@ -34,6 +54,9 @@
    </section>
    
       <section class="col-lg-9 ">
+=======
+
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 	<?php
 	function get_product($id){	
 
@@ -44,7 +67,11 @@
 			
 			while($row = mysql_fetch_assoc($run_query)){
 				$name = $row['name'];
+<<<<<<< HEAD
 				$price = "R".number_format($row['unit_price'], 2);
+=======
+				$price = $row['unit_price'];
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 				$image = "<img width='10%' src='".$row['image']."'";
 				$descrp = $row['description'];
 			}
@@ -67,6 +94,7 @@
 	}
 
 ?>
+<<<<<<< HEAD
 <a href='cart.class.php?add_to_cart=<?php echo $id; ?>&prodid=<?php echo $id;?>'>add to cart</a><br>
 <a href="cart.php" id="orange">Go to Cart</a>
    </section>
@@ -95,6 +123,13 @@
 			?>
 
 </div>
+=======
+<a href='product.php?add_to_cart=<?php echo $id; ?>&prodid=<?php echo $id;?>'>add to cart</a><br>
+<a href="cart.php" id="orange">Go to Cart</a>
+
+</div>
+</div>
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
 <?php
 include 'includes/footer.php';
 ?>
