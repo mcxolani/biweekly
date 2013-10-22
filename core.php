@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 <?php
 ob_start(); 
+=======
+<<<<<<< HEAD
+<?php
+ob_start(); 
+=======
+<?php 
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
 session_start();
 
 	class Core{
