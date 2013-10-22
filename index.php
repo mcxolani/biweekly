@@ -1,15 +1,11 @@
-
 <?php include 'includes/header.php'; ?>
-  <body>
-	
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" id="orange">
+  
       <div class="container">
-        <h1>The Best Shop Ever</h1>
-        <p>Welcome to my shop and shop well</p>
+      <?php include 'includes/olaa.php'; ?>
       </div>
-    </div>
+   
 
     <div class="container">
       <!-- Example row of columns -->
@@ -29,5 +25,7 @@
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
       </div>
+	  </div>
+ </div>
 	  
 <?php include 'includes/footer.php'; ?>
