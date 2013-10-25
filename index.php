@@ -1,33 +1,33 @@
-
 <?php include 'includes/header.php'; ?>
-  <body>
-	
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" id="orange">
+  
       <div class="container">
-        <h1>The Best Shop Ever</h1>
-        <p>Welcome to my shop and shop well</p>
+      <?php include 'includes/olaa.php'; ?>
       </div>
-    </div>
+   
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          <h2>Guitor</h2>
+          <p>Acoustic / Electric 12 Str Guitar CW Spruce 4Beq - VINT SUNBURST - See more at:
+           http://www.a1sound.co.za/pSW206CETU12VS/Acoustic--
+           Electric-12-Str-Guitar-CW-Spruce-4Beq---VINT-SUNBUR#sthash.Q2m5mAQ6.<p><a class="btn btn-default" href="search.php">View Products &raquo;</a></p>
         </div>
         <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          <h2>Piano</h2>
+          <p>Acoustic / Electric 12 Str Guitar CW Spruce 4Beq - VINT SUNBURST - See more at: http://www.a1sound.co.za/pSW206CETU12VS/Acoustic--Electric-12-Str-Guitar-CW-Spruce-4Beq---VINT-SUNBUR#sthash.Q2m5mAQ6.</p>
+          <p><a class="btn btn-default" href="search.php">View Products &raquo;</a></p>
        </div>
         <div class="col-lg-4">
-			<h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+			<h2>Microphone</h2>
+          <p>Acoustic / Electric 12 Str Guitar CW Spruce 4Beq - VINT SUNBURST - See more at:
+           http://www.a1sound.co.za/pSW206CETU12VS/Acoustic--
+           Electric-12-Str-Guitar-CW-Spruce-4Beq---VINT-SUNBUR#sthash.Q2m5mAQ6.</p>
+          <p><a class="btn btn-default" href="search.php">View Products &raquo;</a></p>
       </div>
+	  </div>
+ </div>
 	  
 <?php include 'includes/footer.php'; ?>

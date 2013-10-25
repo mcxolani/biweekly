@@ -1,11 +1,30 @@
 <?php
 session_start();
 	class Cart{
-		public function add_to_cart($item){
-			$_SESSION['item'][] = $item;
+
+		
+		function addToCart($item){
+			$_SESSION['cart'][$item]+='1';
+			header("Location: product.php?prodid=$item&message=Item added<a href=\"cart.php\" >Go to Cart</a>");
 		}
-		public function getItem(){
-			return $_SESSION['item'];
+		function getItem(){
+			echo number_format($_SESSION['total'],2);
+		}
+		
+		function getTotal($sub){
+			return $total += $sub;
+		}
+		
+		function plusItem($item){
+			$_SESSION['cart'][$item]+='1';
+		}
+		
+		function removeToCart($item){
+			$_SESSION['cart'][$item]--;
+		}
+		
+		function deleteItem($item){
+			$_SESSION['cart'][$item]=0;
 		}
 	}
 ?>

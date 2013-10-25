@@ -1,21 +1,25 @@
   <hr>
 
-      <footer class="container">
-        <p>&copy; Company 2013</p>
-      </footer>
-    </div> <!-- /container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script >
-		$(function(){
-			$('#idid').popover('toggle')
-		})	
-	</script>
+    
 	
+
+      <footer class="container">
+      <div class="pull-right">
+        <a href="index.php">Home </a>|
+        <a href="account.php">My Account </a>|
+        <a href="cart.php">Shopping Cart</a>
+        <p>&copy; A1sound 2013</p>
+      
+    </div>
+      </footer>
+    </div>
+      <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script >
+    $(function(){
+      $('#idid').popover('toggle')
+    })  
+  </script>
   </body>
 </html>
