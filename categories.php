@@ -125,7 +125,11 @@
 				<form method="post"  action="categories.php">
 							Category Name: <input type="text" class="form-control" name="name"><br>
 							<input type="checkbox" name="visible" value="1">Visible<br>
+<<<<<<< HEAD
 							<button class="btn btn-success" type="submit" name="add_cat">Add Category</button>
+=======
+							<button class="btn btn-succes" type="submit" name="add_cat">Add Category</button>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 						</form >
 
 			</div>
@@ -152,7 +156,11 @@
 						</select><br>
 							<input type="checkbox" name="visible" value="1">Visible<br>
 									
+<<<<<<< HEAD
 											<button class="btn btn-success" type="submit" name="add_sub_cat">Add Sub Category</button>
+=======
+											<button class="btn btn-succes" type="submit" name="add_sub_cat">Add Sub Category</button>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 						</form >
 
 			</div>
@@ -170,7 +178,10 @@
 	  	<h4 id="err">Edit Categories</h4>
  <table class="table table-striped">
 				  <th>Name</th>
+<<<<<<< HEAD
 				  <th>Status</th>
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				  <th>Delete</th>
 					    <?php
 				$query = "SELECT * FROM categories";
@@ -178,8 +189,12 @@
 				while($row = mysql_fetch_assoc($run_query)){
 				?> <tr>
 					<td><a href='edit_category.php?cat_id=<?php echo $row['id'];?>'><?php echo $row['name']; ?></a></td>
+<<<<<<< HEAD
 					<td><?php echo $row['visible'] ? 'visible' : 'hidden'; ?></a></td>
 					<td><a class='btn btn-danger' href='categories.php?delete_cat=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></td>
+=======
+					<td><button class='btn btn-danger'><a href='categories.php?delete_cat=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					
 					</tr>
 					<?php } ?>
@@ -196,7 +211,10 @@
 	  	<h4 id="err">Edit Sub Categories</h4>
  <table class="table table-striped">
 				  <th>Name</th>
+<<<<<<< HEAD
 				  <th>Status</th>
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				  <th>Delete</th>
 					    <?php
 				$query = "SELECT * FROM sub_categories";
@@ -204,8 +222,12 @@
 				while($row = mysql_fetch_assoc($run_query)){
 				?> <tr>
 					<td><a href='edit_sub_category.php?sub_cat_id=<?php echo $row['id'];?>'><?php echo $row['name']; ?></a></td>
+<<<<<<< HEAD
 					<td><?php echo $row['visible'] ? 'visible' : 'hidden'; ?></a></td>
 					<td><a class='btn btn-danger' href='categories.php?delete_sub_cat=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></td>
+=======
+					<td><button class='btn btn-danger'><a href='categories.php?delete_sub_cat=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					
 					</tr>
 					<?php } ?>

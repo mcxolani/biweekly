@@ -3,7 +3,11 @@
 	include 'includes/header.php';
 	
 	if(!$core->loggedin()||$core->getuserfield('admin')=='1'){
+<<<<<<< HEAD
 		header("Location: register.php?error=Login first");
+=======
+		header("Location: manage.php?error=Super Adnim Can Not Be Adited");
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		die();
 	}
 	
@@ -14,7 +18,10 @@
 		$lastName = $_POST['lastName'];
 		$address = $_POST['address'];
 		$account_holder = $_POST['account_holder'];
+<<<<<<< HEAD
 		$card_type = $_POST['card_type'];
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		$account_number = $_POST['account_number'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
@@ -61,7 +68,10 @@
 				$query .= "password='$password',clean_password='$clean_password', ";
 			}
 			$query .= "phone='$phone', ";
+<<<<<<< HEAD
 			$query .= "card_type='$card_type', ";
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			$query .= "address='$address' ";
 			$query .= "  Where id='$id'";
 			$db->query($query);
@@ -137,20 +147,28 @@
 							Address: <textarea class="form-control"  name="address" ><?php echo $row['address']; ?></textarea><br>
 					<legend>Billng Info </legend>
 							Account Holder: <input type="text" class="form-control" name="account_holder" value="<?php echo $row['account_holder']; ?>">
+<<<<<<< HEAD
 							Card Type: <input type="text" class="form-control" name="card_type" value="<?php echo $row['card_type']; ?>">
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 							Credit Card Number: <input type="text" class="form-control" name="account_number" value="<?php echo $row['account_number']; ?>">
 					<?php
 					}
 	
 	
 ?>
+<<<<<<< HEAD
 		<button type="submit" class="btn btn-success" value="Update" name="update">Save Changes</button>
+=======
+		<button type="submit" class="btn btn-default" value="Update" name="update">Save Changes</button>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					<fieldset>
 				</form >
 				
 				
 		</section >	
 		  <section class="col-lg-4 ">
+<<<<<<< HEAD
 		  	<table class="table table-striped">
 				  <th>Order Number</th>
 				  <th>Date</th>
@@ -181,6 +199,21 @@
 		  </section>
 		  <section>
 
+=======
+		  <?php
+		  if(isset($_GET['order_num'])){
+			$order_num = $_GET['order_num'];
+				$query1 = 'select * FROM order_items WHERE order_num='.$order_num;
+				$run_query1 = $db->query($query1);
+						echo 'Order Number:'.$order_num.'<br>';
+						while($row1 = mysql_fetch_assoc($run_query1)){
+							echo 'Item Name:'.$row1['product_name'];
+							echo ' Total:'.$row1['cost'];
+							echo ' Quantity:'.$row1['quantity'].'<hr>';
+						}
+		}
+		?>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		  </section>
 	</div>
 </div>	

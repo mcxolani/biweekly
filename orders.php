@@ -7,14 +7,19 @@
 		die();
 	}
 	
+<<<<<<< HEAD
 	if(isset($_GET['message'])){
 		$message .= $_GET['message'];
 		}
 
+=======
+	
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 	?>
 	<div class="container">
       <div class="row">	
 	    <section class="col-lg-8 ">
+<<<<<<< HEAD
  <?php 
 		  //status success
 	  if(isset($message)){
@@ -122,6 +127,35 @@
 
 		</section >	
 		  <section class="col-lg-4 ">
+=======
+	<?php
+	////////////////////////////
+
+			$query = "select * FROM orders";
+					$run_query = $db->query($query);
+					while($row = mysql_fetch_assoc($run_query)){
+					
+						echo 'Order Number:<a href="orders.php?order_num='.$row['order_num'].'">'.$row['order_num'].'</a>';
+					
+					}
+	
+	
+?>
+		</section >	
+		  <section class="col-lg-4 ">
+		  <?php
+		 /*
+				$query1 = 'select * FROM order_items WHERE order_num='.$order_num;
+				$run_query1 = $db->query($query1);
+						echo 'Order Number:'.$order_num.'<br>';
+						while($row1 = mysql_fetch_assoc($run_query1)){
+							echo 'Item Name:'.$row1['product_name'];
+							echo ' Total:'.$row1['cost'];
+							echo ' Quantity:'.$row1['quantity'].'<hr>';
+						}
+		}*/
+		?>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 
 		<?php
 		 if(isset($_GET['order_num'])){
@@ -154,6 +188,7 @@
 				
 	echo '</div>';
 }
+<<<<<<< HEAD
 if(isset($_GET['approve'])){
 $core->approve_order($_GET['approve']);
 }
@@ -164,6 +199,10 @@ $core->reject_order($_GET['reject']);
 	?>
 		  </section>
 		  </section>
+=======
+	?>
+		  </section>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 	</div>
 </div>	
 	    

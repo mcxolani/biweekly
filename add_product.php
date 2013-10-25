@@ -45,11 +45,14 @@
 						
 					if($run_query = mysql_query($query)&&$uploaded){
 							$message .= 'Product Added';
+<<<<<<< HEAD
 								$name = '';
 							$price = '';
 							$descr = '';
 							$cat = '';
 							$model = '';
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 						}else{
 							$error .= 'Could not add product';
 						}
@@ -117,7 +120,11 @@
 							}
 								?>
 						</select><br>
+<<<<<<< HEAD
 						<button class="btn btn-success" type="submit" name="add">Add</button>
+=======
+						<button class="btn btn-succes" type="submit" name="add">Add</button>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 						</form >
 				</section>
 			</div>

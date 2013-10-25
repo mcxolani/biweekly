@@ -15,7 +15,10 @@
 		$lastName = $_POST['lastName'];
 		$address = $_POST['address'];
 		$account_holder = $_POST['account_holder'];
+<<<<<<< HEAD
 		$card_type = $_POST['card_type'];
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		$account_number = $_POST['account_number'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
@@ -62,7 +65,10 @@
 				$query .= "password='$password',clean_password='$clean_password', ";
 			}
 			$query .= "phone='$phone', ";
+<<<<<<< HEAD
 			$query .= "card_type='$card_type', ";	
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			$query .= "address='$address' ";
 			$query .= "  Where id='$id'";
 			$db->query($query);
@@ -101,7 +107,11 @@
 		<?php
 		}
 		?>
+<<<<<<< HEAD
 		<h4>Welcome To a User Account </h4><hr>
+=======
+		<h4>Welcome To Account </h4><hr>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 </div>
       <div class="row">	
 	    <section class="col-lg-3 ">
@@ -136,14 +146,21 @@
 							Address: <textarea class="form-control"  name="address" ><?php echo $row['address']; ?></textarea><br>
 					<legend>Billng Info </legend>
 							Account Holder: <input type="text" class="form-control" name="account_holder" value="<?php echo $row['account_holder']; ?>">
+<<<<<<< HEAD
 							Card Type: <input type="text" class="form-control" name="card_type" value="<?php echo $row['card_type']; ?>">
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 							Credit Card Number: <input type="text" class="form-control" name="account_number" value="<?php echo $row['account_number']; ?>">
 					<?php
 					}
 	
 	
 ?>
+<<<<<<< HEAD
 		<button type="submit" class="btn btn-success" value="Update" name="update">Save Changes</button>
+=======
+		<button type="submit" class="btn btn-default" value="Update" name="update">Save Changes</button>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					<fieldset>
 				</form >
 				

@@ -13,7 +13,11 @@
 			return $con;
 		}
 		public function execute($query){
+<<<<<<< HEAD
 			$run_query = $this->query($query);
+=======
+			$run_query = mysql_query($query);
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			
 			if($row = mysql_affected_rows()==1){
 				return 'Successfully Registered <br>';

@@ -22,6 +22,7 @@ mapopane
 mapopane
 777\nProducts\n\n Item Name: Casio guitor\n Price: R213,654.00\n Quantity: 3\nTotal Price: R640,962.00\n\n\n Order Number: 26079\nPurchased by: Xolani Masuku at 2013-10-23 00:46:24\nEmail: xolani.masuku4@gmail.com \nShipping Address: xolani street
 mapopane
+<<<<<<< HEAD
 777\nProducts\n\n Item Name: Numark - Direct drive turntable\n Price: R1,647.00\n Quantity: 3\nTotal Price: R4,941.00\n\n\n Order Number: 34502\nPurchased by: Xolani Masuku at 2013-10-23 15:35:26\nEmail: xolani.masuku4@gmail.com \nShipping Address: xolani street
 mapopane
 777\nProducts\n\n Item Name: Numark - Direct drive turntable\n Price: R1,647.00\n Quantity: 1\nItem Name: Acoustic / Electric 12 Str Guitar CW \n Price: R1,500.00\n Quantity: 1\nTotal Price: R3,147.00\n\n\n Order Number: 67070\nPurchased by: Xolani Masuku at 2013-10-23 18:59:51\nEmail: xolani.masuku4@gmail.com \nShipping Address: xolani street
@@ -48,3 +49,6 @@ mapopane
 777\nProducts\n\n Item Name: Acoustic / Electric 12 Str Guitar\n Price: R3,511.00\n Quantity: 1\nTotal Price: R3,511.00\n\n\n Order Number: 72951\nPurchased by: Xolani Masuku at 2013-10-24 21:58:01\nEmail: xolani.masuku4@gmail.com \nShipping Address: xolani street
 mapopane
 777\nProducts\n\n Item Name: The Drum Yahama\n Price: R15,000.00\n Quantity: 8\nTotal Price: R120,000.00\n\n\n 
+=======
+777\nProducts\n\n Item Name: Numark - Direct drive turntable\n Price: R1,647.00\n Quantity: 3\nTotal Price: R4,941.00\n\n\n 
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435

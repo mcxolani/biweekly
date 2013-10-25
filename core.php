@@ -1,10 +1,28 @@
+<<<<<<< HEAD
 <?php
 ob_start(); 
+=======
+<<<<<<< HEAD
+<?php
+ob_start(); 
+=======
+<<<<<<< HEAD
+<?php
+ob_start(); 
+=======
+<?php 
+>>>>>>> 35c9b6c4b0404b12bdc7feab73f8669bab831540
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 session_start();
 require "includes/dbconn.class.php";
 
 	class Core{
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		//check if user is logged in
 	function loggedin(){
 		if(isset($_SESSION['user_id'])){
@@ -42,6 +60,7 @@ require "includes/dbconn.class.php";
 		$query = "SELECT * FROM product WHERE id='$id'";
 		$run_query = mysql_query($query);
 		
+<<<<<<< HEAD
 		if(mysql_num_rows($run_query) <= 0){
 			echo '<h4>no product found</h4>';
 		}
@@ -74,6 +93,8 @@ require "includes/dbconn.class.php";
 		$query = "SELECT * FROM product WHERE id='$id'";
 		$run_query = mysql_query($query);
 		
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		if(mysql_num_rows($run_query) > 0){
 		
 		while($row = mysql_fetch_assoc($run_query)){
@@ -145,10 +166,16 @@ require "includes/dbconn.class.php";
 				}
 				echo '  <div class="col col-lg-3 col-md-3 col-sm-6">';
 					echo '<div class="thumbnail">';
+<<<<<<< HEAD
 					echo "<a href='product.php?prodid=".$row['id']."'><img width='100%' height='150px' src='".$row['image']."'/></a>";
 					echo "<a href='product.php?prodid=".$row['id']."'>".$row['name']."</a><hr>";
 					echo "<span class=\"badge pull-right\">R".number_format($row['unit_price'], 2)."</span><br>";
 					echo ' </div>';
+=======
+					echo "<a href='product.php?prodid=".$row['id']."'><img width='100%' height='150px' src='".$row['image']."'/></a><hr>";
+					echo "<a href='product.php?prodid=".$row['id']."'>".$row['name']."</a><span class=\"badge pull-right\">R".number_format($row['unit_price'], 2)."</span>";
+					echo ' </div><br>';
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					echo ' </div>';
 					if($count%4==0){
 					echo '  </div >';
@@ -158,7 +185,10 @@ require "includes/dbconn.class.php";
 	}
 	//delete category
 	function delete_cat($id){
+<<<<<<< HEAD
 		$db = new DatabaseConnection;
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			$query = "delete from categories where id='$id' limit 1";
 			$run_query = mysql_query($query);
 			if(mysql_affected_rows()==1){
@@ -177,6 +207,7 @@ require "includes/dbconn.class.php";
 					header("Location: categories.php?error=Could not Delete Sub Category");
 				}
 	}
+<<<<<<< HEAD
 	function reject_order($order_num){
 		$query = "UPDATE orders set order_status='2' where order_num='$order_num'";
 			$run_query = mysql_query($query);
@@ -195,5 +226,8 @@ require "includes/dbconn.class.php";
 					header("Location: orders.php?error=Could not Approved Order");
 				}
 	}	
+=======
+	
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 }
 ?>

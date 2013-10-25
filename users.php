@@ -1,8 +1,21 @@
 <?php
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		require "includes/user.class.php";
 	include 'includes/header.php';
 	
 	if(!$core->loggedin()||!$core->getuserfield('admin')){
+<<<<<<< HEAD
+=======
+=======
+	//require 'db_con.php';
+	include 'includes/header.php';
+	
+	if(!loggedin()||!getuserfield('admin')){
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		header("Location: index.php");
 		die();
 	}
@@ -14,6 +27,10 @@
 		$message .= $_GET['message'];
 		}
 	if(isset($_POST['add'])){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			$username = $_POST['username'];
 			$type = $_POST['type'];
 			$email = $_POST['email'];
@@ -45,6 +62,35 @@
 			$error .= "* Enter all fields";
 		}
 	}
+<<<<<<< HEAD
+=======
+=======
+		$target_file = basename($_FILES['image']['name']);
+	
+			$name = $_POST['name'];
+			$price = $_POST['price'];
+			$descr = $_POST['descr'];
+			$cat = $_POST['catagory'];
+			$image = 'images/'.$target_file;
+			if(!empty($name)&&!empty($price)&&!empty($image)&&!empty($descr)&&!empty($cat)){
+			$temp_file = $_FILES['image']['tmp_name'];
+		
+		$image_folder = "images";
+		$uploaded=move_uploaded_file($temp_file, $image_folder.'\\'.$target_file);
+			
+			$query = "INSERT into product values('','$name','$price','$image','$descr','$cat')";
+			
+			if($run_query = mysql_query($query)&&$uploaded){
+					$message = 'Product Added';
+				}else{
+					$message = 'Could not add product';
+				}
+			}else{
+				$message = 'must enter all fields';
+			}
+		}
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 
 ?>
     <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -52,19 +98,42 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 	  <section class="col-lg-6 ">
 	  
 	  	  <?php 
 		  //status success
+<<<<<<< HEAD
+=======
+=======
+	  <section class="col-lg-8 ">
+	  	  <?php 
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 	  if(isset($message)){
 	  ?>
 		<div class="alert alert-success">
 		  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+<<<<<<< HEAD
 		  <strong></strong> <?php echo $message;?>
+=======
+<<<<<<< HEAD
+		  <strong></strong> <?php echo $message;?>
+=======
+		  <strong>Thanks!</strong> <?php echo $message;?>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		</div>
 		<?php
 		}
 		?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		
 		<?php 
 		//error
@@ -94,25 +163,61 @@
 				<li ><a href="#cat2" data-toggle="tab">Admin</a></li>
 				
 				<?php } ?>
+<<<<<<< HEAD
+=======
+=======
+		<h4>Welcome to User Management <?php echo getuserfield('username');?></h4><hr>
+
+		
+	  	<div class="tabbable tabs" >
+			<ul class="nav nav-tabs" >
+				<li class="active"><a href="#cat1" data-toggle="tab">Users</a></li>
+				<li ><a href="#cat2" data-toggle="tab">Admin</a></li>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				<li ><a href="#cat3" data-toggle="tab">Stuff</a></li>
 				<li ><a href="#cat4" data-toggle="tab">Blocked Users</a></li>
 			</ul>
 		</div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 
 		<section class="tab-content">
 			<div class="tab-pane active" id="cat1">
 				  <table class="table table-striped">
 				  <th>Name</th>
+<<<<<<< HEAD
+=======
+=======
+	  
+	  <section class="tab-content">
+			<div class="tab-pane active" id="cat1">
+				  <table class="table table-striped">
+				  <th>Name</th>
+				  <th>Send Message</th>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				  <th>Delete</th>
 				  <th>Block</th>
 					    <?php
 				$query = "SELECT * FROM users where admin=0 AND access=1";
 				$run_query = mysql_query($query);
+<<<<<<< HEAD
 				while($row = mysql_fetch_assoc($run_query)){
 				?> <tr>
 					<td><a href='user_status.php?user_id=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
 					<td><a class='btn btn-danger' href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></td>
 					<td><a class='btn btn-info' href='users.php?block=<?php echo $row['id'];?>'>Block</a></td>
+=======
+<<<<<<< HEAD
+				while($row = mysql_fetch_assoc($run_query)){
+				?> <tr>
+					<td><a href='user_status.php?user_id=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+					<td><button class='btn btn-danger'><a href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='users.php?block=<?php echo $row['id'];?>'>Block</a></button></td>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					</tr>
 					<?php } ?>
 			</table>
@@ -133,8 +238,13 @@
 				while($row = mysql_fetch_assoc($run_query)){
 				?> <tr>
 					<td><a href='user_status.php?user_id=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+<<<<<<< HEAD
 					<td><a class='btn btn-danger' href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></td>
 					<td><a class='btn btn-info' href='users.php?block=<?php echo $row['id'];?>'>Block</a></td>
+=======
+					<td><button class='btn btn-danger'><a href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='users.php?block=<?php echo $row['id'];?>'>Block</a></button></td>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 					</tr>
 					<?php } ?>
 			</table>
@@ -152,15 +262,95 @@
 				while($row = mysql_fetch_assoc($run_query)){
 				?> <tr>
 					<td><a href='user_status.php?user_id=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+<<<<<<< HEAD
 					<td><a class='btn btn-danger' href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></td>
 					<td><a class='btn btn-info' href='users.php?block=<?php echo $row['id'];?>'>Block</a></td>
 					</tr>
 					<?php	}	?>
+=======
+					<td><button class='btn btn-danger'><a href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='users.php?block=<?php echo $row['id'];?>'>Block</a></button></td>
+					</tr>
+					<?php	}	?>
+=======
+			
+				while($row = mysql_fetch_assoc($run_query)){
+				?>
+				
+			
+					<tr>
+					<td><a href='edit2.php?prodid=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+					<td><button class='btn btn-success'><a href='message.php?message=<?php echo $row['id'];?>'>Send Message</a></button></td>
+					<td><button class='btn btn-danger'><a href='edit2.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='edit2.php?block=<?php echo $row['id'];?>'>Block</a></button></td>
+					</tr>
+					<?php
+				}
+
+			?>
+			</table>
+			</div>
+			<div class="tab-pane" id="cat2">
+					  <table class="table table-striped">
+				  <th>Name</th>
+				  <th>Send Message</th>
+				  <th>Delete</th>
+				  <th>Block</th>
+					    <?php
+				$query = "SELECT * FROM users where admin=2";
+				$run_query = mysql_query($query);
+			
+				while($row = mysql_fetch_assoc($run_query)){
+				?>
+				
+			
+					<tr>
+					<td><a href='edit2.php?prodid=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+					<td><button class='btn btn-success'><a href='message.php?message=<?php echo $row['id'];?>'>Send Message</a></button></td>
+					<td><button class='btn btn-danger'><a href='edit2.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='edit2.php?block=<?php echo $row['id'];?>'>Block</a></button></td>
+					</tr>
+					<?php
+				}
+
+			?>
+			</table>
+			</div>
+			<div class="tab-pane" id="cat3">
+			  <table class="table table-striped">
+				  <th>Name</th>
+				  <th>Send Message</th>
+				  <th>Delete</th>
+				  <th>Block</th>
+					    <?php
+				$query = "SELECT * FROM users where admin=3";
+				$run_query = mysql_query($query);
+			
+				while($row = mysql_fetch_assoc($run_query)){
+				?>
+				
+			
+					<tr>
+					<td><a href='edit2.php?prodid=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+					<td><button class='btn btn-success'><a href='message.php?message=<?php echo $row['id'];?>'>Send Message</a></button></td>
+					<td><button class='btn btn-danger'><a href='edit2.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='edit2.php?block=<?php echo $row['id'];?>'>Block</a></button></td>
+					</tr>
+					<?php
+				}
+
+			?>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			</table>
 			</div>
 			<div class="tab-pane" id="cat4">
 							  <table class="table table-striped">
 				  <th>Name</th>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				  <th>Type</th>
 				  <th>Delete</th>
 				  <th>Allow</th>
@@ -176,20 +366,63 @@
 					<tr>
 					<td><a href='user_status.php?user_id=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
 					<td><?php echo $core->type($row['admin']);?></td>
+<<<<<<< HEAD
 					<td><a class='btn btn-danger' href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></td>
 					<td><a class='btn btn-info' href='users.php?allow=<?php echo $row['id'];?>'>Allow</a></td>
 					</tr>
 					<?php  } ?>
+=======
+					<td><button class='btn btn-danger'><a href='users.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='users.php?allow=<?php echo $row['id'];?>'>Allow</a></button></td>
+					</tr>
+					<?php  } ?>
+=======
+				  <th>Send Message</th>
+				  <th>Delete</th>
+				  <th>Block</th>
+					    <?php
+				$query = "SELECT * FROM users where access=0";
+				$run_query = mysql_query($query);
+			
+				while($row = mysql_fetch_assoc($run_query)){
+				?>
+				
+			
+					<tr>
+					<td><a href='edit2.php?prodid=<?php echo $row['id'];?>'><?php echo $row['username']; ?></a></td>
+					<td><button class='btn btn-success'><a href='message.php?message=<?php echo $row['id'];?>'>Send Message</a></button></td>
+					<td><button class='btn btn-danger'><a href='edit2.php?delete=<?php echo $row['id'];?>' onclick="return confirm('Are You Sure?');">Delete</a></button></td>
+					<td><button class='btn btn-info'><a href='edit2.php?allow=<?php echo $row['id'];?>'>Allow</a></button></td>
+					</tr>
+					<?php
+				}
+
+			?>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			</table>
 			</div>
 			
 		</section>
 		</section>
 		
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 	  <section class="col-lg-4 pull-right">
 		<div class="accordion" id="Adduser"  >
 		<!--Add users-->
 			<section class="accordion-group" id="orange">
+<<<<<<< HEAD
+=======
+=======
+	  <section class="col-lg-4">
+		<div class="accordion" id="Adduser"  >
+		<!--Add users-->
+			<section class="accordion-group" >
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				<div class="accordion-heading" >
 					<a href="#add" class="accordion-toggle" data-toggle="collapse" data-parent="#Adduser">Add User<a/>
 				</div>
@@ -197,6 +430,10 @@
 			<div id="add" class="accordion-body collapse in">
 				<section class="accordion-inner">
 					
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 						<form method="post"  action="users.php">
 							Username: <input type="text" class="form-control" name="username"><br>
 							Email: <input class="form-control" type="email" name="email"><br>
@@ -206,11 +443,29 @@
 											<option  value="2">Admin</option>
 											<option  value="3">Stuff</option>
 											<option  value="0">Customer</option>
+<<<<<<< HEAD
 											</select><br>
 											<button class="btn btn-success" type="submit" name="add">Add User</button>
 						</form >
 				
 				</section>
+=======
+=======
+						<form method="post" enctype="multipart/form-data" action="manage.php">
+							Username: <input type="text" class="form-control" name="username"><br>
+							Email: <input class="form-control" type="text" name="email"><br>
+							Password: <input type="password" class="form-control" name="pass"><br>
+							User Type: <select class="form-control" name="catagory">
+											<option  value="2">Admin</option>
+											<option  value="3">Stuff</option>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+											</select><br>
+											<button class="btn btn-succes" type="submit" name="add">Add User</button>
+						</form >
+				
+				</section>
+<<<<<<< HEAD
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			</div>	<!--Add users--><br><br>
 			
 
@@ -222,7 +477,11 @@
 					<a href="#send" class="accordion-toggle" data-toggle="collapse" data-parent="#Send">Send NewsLetter<a/>
 				</div>
 			</section>
+<<<<<<< HEAD
 			<div id="send" class="accordion-body collapse in">
+=======
+			<div id="send" class="accordion-body collapse ">
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				<section class="accordion-inner">
 					<?php 
 						if(isset($_POST['send'])){
@@ -233,12 +492,21 @@
 					?>
 					
 						<form method="post"  action="users.php">
+<<<<<<< HEAD
 							Subject: <input type="text" class="form-control" name="subject"><br>
 							Message: <textarea class="form-control" type="text" name="message"></textarea>
 							
 							<button class="btn btn-success" type="submit" name="ssend">Send</button>
 						</form >
 	
+=======
+							Subject: <input type="text" class="form-control" name="username"><br>
+							Message: <textarea class="form-control" type="email" name="email"></textarea>
+							
+							<button class="btn btn-succes" type="submit" name="send">Send</button>
+						</form >
+				
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 				</section>
 			</div>	<!--Add users-->
 		
@@ -255,6 +523,7 @@
 		if(isset($_GET['allow'])){
 			$core->allow_user($_GET['allow']);
 		}
+<<<<<<< HEAD
 		 
 
 			
@@ -273,9 +542,32 @@
 				}
 		
 				
+=======
+		
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		
 		?>
 	</div>
 	</div>
 			
 <?php include 'includes/footer.php'; ?>
+<<<<<<< HEAD
+=======
+=======
+			</div>	<!--Add users-->
+			
+		
+		</section>
+		</div>
+	</div>
+	</div>
+	
+			
+			<?php
+			//iveri.co.za
+			//iverilite.co.za
+			//NSA bullrun
+include 'includes/footer.php';
+?>
+>>>>>>> cea68d6ce8007100813cb65530d7fcbf03d314ce
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435

@@ -14,7 +14,10 @@
 		$phone = $_POST['phone'];
 		$firstName = $_POST['firstName'];
 		$lastName = $_POST['lastName'];
+<<<<<<< HEAD
 		$card_type = $_POST['card_type'];
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		$address = $_POST['address'];
 		$account_holder = $_POST['account_holder'];
 		$account_number = $_POST['account_number'];
@@ -48,7 +51,10 @@
 			
 			if($var5){$query .= "account_number='$account_number', ";}
 			$query .= "phone='$phone', ";
+<<<<<<< HEAD
 			$query .= "card_type='$card_type', ";
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			$query .= "address='$address' ";
 			$query .= "  Where id='$id'";
 			$db->query($query);
@@ -118,7 +124,10 @@
 							Address: <textarea class="form-control"  name="address" ><?php echo $row['address']; ?></textarea><br>
 					<legend>Billng Info </legend>
 							Account Holder: <input type="text" class="form-control" name="account_holder" value="<?php echo $row['account_holder']; ?>">
+<<<<<<< HEAD
 							Card Type: <input type="text" class="form-control" name="card_type" value="<?php echo $row['card_type']; ?>">
+=======
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 							Credit Card Number: <input type="text" class="form-control" name="account_number" value="<?php echo $row['account_number']; ?>">
 					<?php
 					}
@@ -152,7 +161,11 @@
 		?>
 		  </section>
 		  <section class="col-lg-3 ">
+<<<<<<< HEAD
 		  		<a class="btn btn-success" href="checkout.php">Buy</a>
+=======
+		  		<button class="btn btn-success"><a href="checkout.php">Buy</a></button>
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 		   </section>
 	</div>
 </div>	

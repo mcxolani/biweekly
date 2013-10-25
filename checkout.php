@@ -20,7 +20,11 @@ include 'includes/header.php';
 			  	header("Location: buy_details.php?error=Your Address is required to checkout");
 			  	die(); 
 			  }
+<<<<<<< HEAD
 			  if(!$core->getuserfield('account_holder')||!$core->getuserfield('account_number')||!$core->getuserfield('card_type')){ 
+=======
+			  if(!$core->getuserfield('account_holder')||!$core->getuserfield('account_number')){ 
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 			  	header("Location: buy_details.php?error=Your Billing info is Incomplete");
 			  	die();
 			  }
@@ -37,7 +41,11 @@ $price = $_SESSION['total'];
 $addr = $core->getuserfield('address');
 $email = $core->getuserfield('email');
 $time = strftime('%Y-%m-%d %H:%M:%S',time());
+<<<<<<< HEAD
 $pay_info = 'Account Holder: '.$core->getuserfield('account_holder').',\r\n '.$core->getuserfield('card_type').' Credit Card Number: '.$core->getuserfield('account_number');;
+=======
+$pay_info = 'Account Holder: '.$core->getuserfield('account_holder').'\r\n Credit Card Number: '.$core->getuserfield('account_number');;
+>>>>>>> a668b2e8306152416a4355a4ca22852332e2b435
 $order_num = rand(11111,99999);
  $query2 = "insert into orders (order_num,customer_id,email,
  	shipping_address,time,price,customer_name,
